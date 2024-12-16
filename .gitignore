@@ -19,3 +19,5 @@ terraform/*.tfvars.json
 
 terraform/*.terraform.lock.hcl
 terraform/private_key.pem
+
+ansible/config_role/files/config.php

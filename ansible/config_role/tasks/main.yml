@@ -1,2 +1,51 @@
 ---
 # tasks file for config_role
+- name: Update apt cache
+  apt:
+    update_cache: yes
+    cache_valid_time: 3600  # cache for 1 hour
+
+- name: Install Apache2, MySQL, PHP, and required packages
+  apt:
+    name:
+      - apache2
+      - mysql-server
+      - php
+      - libapache2-mod-php
+      - php-mysql
+    state: present
+    update_cache: yes
+
+- name: Ensure Apache service is running and enabled
+  service:
+    name: apache2
+    state: started
+    enabled: yes
+
+- name: Ensure MySQL service is running and enabled
+  service:
+    name: mysql
+    state: started
+    enabled: yes
+
+- name: Ensure website directory exists
+  file:
+    path: /var/www/html
+    state: directory
+    mode: '0755'
+
+- name: Ensure MySQL service is started and enabled
+  service:
+    name: mysql
+    state: started
+    enabled: yes
+
+- name: Copy index.php to /var/www/html/
+  copy:
+    src: index.php 
+    dest: /var/www/html/index.php
+
+- name: Copy config.php to /var/www/html/
+  copy:
+    src: config.php  
+    dest: /var/www/html/config.php

@@ -1,0 +1,7 @@
+---
+- name: installing_packages
+  hosts: my_website 
+  user: ubuntu
+  become: true
+  roles:
+    - config_role
