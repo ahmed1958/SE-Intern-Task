@@ -134,6 +134,7 @@ ansible/config_role/files/config.php: Like the earlier config.php file, this fil
 <div text-align="center">
 <img alt="remote" src="screenshots_of_website/remote.png">
 </div>
+
 ## Networking Basics
 <b>Ip address</b>: It is used to identify your device and comes in different types. One type is the public IP address, which allows people on the internet to communicate with your device. Another type is the private IP address, which allows devices on the same network to communicate with each other. Currently, there is IPv4, but due to the growing number of devices, the available range is insufficient, leading many companies to adopt IPv6. IP addresses operate at Layer 3, so they can only be used on routers and Layer 3 switches.
 
