@@ -35,7 +35,9 @@ then, i use <b>mysql_secure_installation</b> to secure the MySQL installation an
 
 ### copy the php files to the default directory
 To finalize the configuration, I copied config.php to the web server’s document root, making sure all necessary PHP settings were in place.
-
+<div text-align="center">
+<img alt="local host" src="screenshots_of_website/local.png">
+</div>
 
 ## Project Setup and Deployment (Cloud)
 
@@ -129,7 +131,9 @@ terraform/*.terraform.lock.hcl: This file locks the provider versions used by Te
 terraform/private_key.pem: This is likely a private key used for secure communication with remote machines or services. Private keys should never be tracked in version control for security reasons.
 
 ansible/config_role/files/config.php: Like the earlier config.php file, this file may contain sensitive configuration information for Ansible roles or tasks and should not be tracked in Git.
-
+<div text-align="center">
+<img alt="remote" src="screenshots_of_website/remote.png">
+</div>
 ## Networking Basics
 <b>Ip address</b>: It is used to identify your device and comes in different types. One type is the public IP address, which allows people on the internet to communicate with your device. Another type is the private IP address, which allows devices on the same network to communicate with each other. Currently, there is IPv4, but due to the growing number of devices, the available range is insufficient, leading many companies to adopt IPv6. IP addresses operate at Layer 3, so they can only be used on routers and Layer 3 switches.
 
